@@ -3,7 +3,7 @@ import { Loader, PointerLockControls, KeyboardControls, Text, Sparkles, Html, St
 import { Debug, Physics, RigidBody } from "@react-three/rapier"
 import { Player } from "./Player"
 import { Suspense } from "react"
-import { Digestive } from "./Digestive"
+import { DigestiveRoom } from "./DigestiveRoom"
 import { SolarSystem } from "./Solarsytem"
 import { CorridorAstronomy } from "./CorridorAstronomy"
 import { CorridorBiology } from "./CorridorBiology"
@@ -21,56 +21,63 @@ export default function App() {
   const queryParams = new URLSearchParams(window.location.search)
   const gravity = queryParams.get("gravity") || -9.8
   const flycontrol = queryParams.get("flycontrol") || false
+  var zdef = 0;
+  if (window.location.pathname == "/") {
+    zdef = 25
+  }
+  const x = queryParams.get("x") || 0
+  const y = queryParams.get("y") || 0
+  const z = queryParams.get("z") || zdef
   console.log(gravity)
   console.log(flycontrol)
 
   return (<>
     {/* */}
-    
-      <KeyboardControls
-        map={[
-          { name: "forward", keys: ["ArrowUp", "w", "W"] },
-          { name: "backward", keys: ["ArrowDown", "s", "S"] },
-          { name: "left", keys: ["ArrowLeft", "a", "A"] },
-          { name: "right", keys: ["ArrowRight", "d", "D"] },
-          { name: "jump", keys: ["Space"] },
-        ]}>
 
-        <Suspense>
-          <Canvas camera={{ fov: 45 }}>
-            <directionalLight position={[10, 10, 5]} intensity={0.5} />
-            {/* <School/> */}
-            <Physics gravity={[0, gravity, 0]}>
+    <KeyboardControls
+      map={[
+        { name: "forward", keys: ["ArrowUp", "w", "W"] },
+        { name: "backward", keys: ["ArrowDown", "s", "S"] },
+        { name: "left", keys: ["ArrowLeft", "a", "A"] },
+        { name: "right", keys: ["ArrowRight", "d", "D"] },
+        { name: "jump", keys: ["Space"] },
+      ]}>
 
-              <Routes>
-                <Route path="/SolarSystem" element={<SolarSystem />} />
-                <Route path="/Digestive" element={<Digestive />} />
-                <Route path="/CorridorAstronomy" element={<CorridorAstronomy />} />
-                <Route path="/CorridorBiology" element={<CorridorBiology />} />
-                <Route path="/CorridorChemistry" element={<CorridorChemistry />} />
-                <Route path="/ChemLabFinal" element={<ChemLabFinal />} />
-                <Route path="/" element={<Campus/>} />
+      <Suspense>
+        <Canvas camera={{ fov: 45 }}>
+          <directionalLight position={[10, 10, 5]} intensity={0.5} />
+          {/* <School/> */}
+          <Physics gravity={[0, gravity, 0]}>
 
-                {/* <Route path="/" element={<Signup/>} />
+            <Routes>
+              <Route path="/SolarSystem" element={<SolarSystem />} />
+              <Route path="/Digestive" element={<DigestiveRoom />} />
+              <Route path="/CorridorAstronomy" element={<CorridorAstronomy />} />
+              <Route path="/CorridorBiology" element={<CorridorBiology />} />
+              <Route path="/CorridorChemistry" element={<CorridorChemistry />} />
+              <Route path="/ChemLabFinal" element={<ChemLabFinal />} />
+              <Route path="/" element={<Campus />} />
+
+              {/* <Route path="/" element={<Signup/>} />
           <Route path="/Login" element={<Login/>} /> */}
 
-                {/* <Route path="/Finalcampusmap" element={<Finalcampusmap/>} /> */}
+              {/* <Route path="/Finalcampusmap" element={<Finalcampusmap/>} /> */}
 
-              </Routes>
+            </Routes>
 
-              <Player flycontrol={flycontrol} />
-              {/* <Debug /> */}
+            <Player flycontrol={flycontrol} x={x} y={y} z={z} />
+            {/* <Debug /> */}
 
 
 
-            </Physics>
-            <PointerLockControls />
-            <ambientLight intensity={0.5} />
-          </Canvas>
+          </Physics>
+          <PointerLockControls />
+          <ambientLight intensity={0.5} />
+        </Canvas>
 
-        </Suspense>
-        <Loader />
-      </KeyboardControls>
+      </Suspense>
+      <Loader />
+    </KeyboardControls>
 
 
   </>

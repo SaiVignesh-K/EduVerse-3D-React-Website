@@ -8,7 +8,7 @@ import { CapsuleCollider , RigidBody, useRapier } from "@react-three/rapier"
 
 
 const loggedin = localStorage.getItem("loggedin") | 0
-const SPEED = 20
+const SPEED = 10
 
 const direction = new THREE.Vector3()
 const frontVector = new THREE.Vector3()
@@ -18,24 +18,28 @@ var step = new Audio('step.mp3');
 let pos = [0,0,0];
 console.log(loggedin)
 console.log(localStorage.getItem("loggedin"))
-if(loggedin == 1 || window.location.pathname != "/") {
-  console.log(window.location.pathname)
-   pos = [0,0,0]
-}
-else{
+// if(loggedin == 1 || window.location.pathname != "/") {
+//   console.log(window.location.pathname)
+//    pos = [0,0,0]
+// }
+// else{
   
-   pos = [0,0,25]
-}
+//    pos = [0,0,25]
+// }
 
 export function Player(props) {
+  const pos = [props.x , props.y , props.z]
   const flycontrol = props.flycontrol
   const ref = useRef()
   const rapier = useRapier()
   const { camera } = useThree()
   const [, get] = useKeyboardControls()
   useFrame((state) => {
+    
     const { forward, backward, left, right, jump } = get()
     const velocity = ref.current.linvel()
+
+
    
     // update camera
     camera.position.set(...ref.current.translation())
@@ -53,7 +57,11 @@ export function Player(props) {
     const ray = world.castRay(new RAPIER.Ray(ref.current.translation(), { x: 0, y: -1, z: 0 }))
     const grounded = ray && ray.collider && Math.abs(ray.toi) <= 1.75
 
-    if (jump && grounded) ref.current.setLinvel({ x: 0, y: 7.5, z: 0 })
+    // if (jump && grounded) ref.current.setLinvel({ x: 0, y: 7.5, z: 0 })    
+
+
+    //Edited
+    if (jump) ref.current.setLinvel({ x: 0, y: 2, z: 0 })
 
     //audio
     if(Math.abs(backward - forward) & grounded) step.play()

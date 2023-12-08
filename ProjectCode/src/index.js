@@ -9,20 +9,30 @@ import { BrowserRouter as Router, Route, Switch, Routes, BrowserRouter } from 'r
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 
-
+// import Manual from "./Manual";
+import Teleporter from "./teleporter";
+import FormComponent from "./FormComponent";
+import Manual from "./Manual";
 function Overlay() {
   const { text, desc } = useSharedState();
 
   return (
     <>
       {/* <Login/> */}
+
       <DashBoard/>
+      <Manual/>
+    
+      <FormComponent/>
+      <Teleporter/>
       <div className="dot" />
       <p className="hovertext">{text}</p>
       <p className="desc" id="desc">
       💡{desc}
       </p>
       <App />
+      <DashBoard/>
+      
     </>
   );
 }

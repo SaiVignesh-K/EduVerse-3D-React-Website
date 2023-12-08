@@ -119,3 +119,95 @@ button {
 .overlayDash{
   z-index: 999999999999;
 }
+
+
+.teleporter{
+  visibility: collapse;
+  position: absolute;
+  background-color: #3f3f3f;
+  padding: 16px;
+  width: 590px;
+  height: 50%;
+  bottom: 80px;
+  left: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  z-index: 9999999999999999999999;
+}
+
+.telebutton{
+  display: inline-block;
+  height: 75px;
+  /* width: 75px; */
+  width: 17%;
+  background-color: #101010;
+  border-radius: 10px;
+  margin: 5px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  padding-top: 7px;
+  top: 10%;
+}
+
+.telebutton:hover{
+  background-color:rgb(22, 26, 26) ;
+  height: 80px;
+  width: 20%;
+  border-color: aquamarine;
+  border-width: thick;
+}
+
+.telebutton-p{
+  color: rgb(176, 168, 168);
+  font-size: small;
+  font-weight: bold;
+  }
+
+.searchlist{
+  background-color: rgb(22, 26, 26);
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  bottom: 20px;
+  left: 5px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  display: inline-block;
+  z-index: 9999999999999999999999;
+  vertical-align: middle;
+}
+
+.searchlist:hover{
+  height: 55px;
+  background-color: #1e1e1e;
+}
+
+.searchbox{
+  position: absolute;
+  width: 95%;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: fill-available;
+}
+
+.searchbox::-webkit-scrollbar {
+  display: none;
+}
+
+.teleicon{
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin-left: 20px;
+  bottom: 20px;
+  z-index: 9999999999999999999999999999999;
+}

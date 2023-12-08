@@ -3,12 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-three/drei": "9.34.4",
     "@react-three/fiber": "8.8.10",
     "@react-three/rapier": "0.8.2",
     "@react-three/xr": "^5.7.1",
     "@types/three": "0.144.0",
+    "axios": "^1.6.0",
     "bootstrap": "^5.3.2",
+    "cors": "^2.8.5",
+    "mongodb": "^6.2.0",
+    "mongoose": "^8.0.0",
+    "nodemon": "^3.0.1",
     "r3f-perf": "^6.6.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -40,9 +48,9 @@
     ]
   },
   "keywords": [
-    "pointerlock-controls",
-    "game",
-    "minecraft"
+    "iit tirupati",
+    "3d",
+    "eduverse"
   ],
   "description": "Educational Ecosystem for Students and Teachers"
 }

@@ -1,0 +1,5 @@
+/* Custom CSS to decrease the height of the chat window */
+#webchat {
+    max-height: 300px; /* Adjust the height as per your requirement */
+  }
+  

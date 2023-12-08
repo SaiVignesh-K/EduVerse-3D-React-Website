@@ -22,25 +22,30 @@ export function Campus(props) {
       <group {...props} dispose={null} position={[0, -20, 0]} scale={7} rotation={[0, -Math.PI / 2, 0]}>
         <group position={[-40.038, 0.197, -12.731]} rotation={[-Math.PI / 2, 0, 0]} scale={0.682}>
           <group rotation={[Math.PI / 2, 0, 0]}>
+          {/* <RigidBody type="mesh"> */}
             <mesh geometry={nodes.court_court_0.geometry} material={materials.court} position={[13.781, 0, -11.633]} rotation={[0, -0.003, 0]} scale={0.611} />
             <mesh geometry={nodes.court_gray_metalic_0.geometry} material={materials.gray_metalic} position={[13.781, 0, -11.633]} rotation={[0, -0.003, 0]} scale={0.611} />
             <mesh geometry={nodes.court_gray_metalic_0001.geometry} material={materials.gray_metalic} position={[13.781, 0, -11.633]} rotation={[0, -0.003, 0]} scale={0.611} />
             <mesh geometry={nodes.court_kale_diregi_0.geometry} material={materials.kale_diregi} position={[13.781, 0, -11.633]} rotation={[0, -0.003, 0]} scale={0.611} />
             <mesh geometry={nodes.court_spot_light_0.geometry} material={materials.spot_light} position={[13.781, 0, -11.633]} rotation={[0, -0.003, 0]} scale={0.611} />
+          {/* </RigidBody> */}
           </group>
         </group>
         <group position={[-10.795, 0.466, -0.965]} rotation={[-Math.PI / 2, 0, 0]} scale={0.418}>
           <group rotation={[Math.PI / 2, 0, 0]}>
             <group position={[0, 3.278, 0]} scale={[0.302, 1.009, 0.302]}>
-              <mesh 
-              geometry={nodes.Object_4.geometry} material={materials['Material.042']} position={[0, -2.097, 0]} scale={[1, 0.539, 1]} />
+              <mesh
+                geometry={nodes.Object_4.geometry} material={materials['Material.042']} position={[0, -2.097, 0]} scale={[1, 0.539, 1]} />
               <mesh geometry={nodes.Object_5.geometry} material={materials['Material.043']} position={[0, -1.701, 0]} scale={[1, 0.539, 1]} />
             </group>
           </group>
         </group>
+
         <group position={[-23.244, 0.151, -0.734]} rotation={[-Math.PI / 2, 0, 1.567]} scale={[0.002, 0.002, 0.004]}>
           <group position={[0, 0, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.98}>
-            <group position={[0, 0, -0.001]}>
+            <group onPointerEnter={(e) => setText('Admistrative Block')}
+              onPointerLeave={(e) => clear()}
+              position={[0, 0, -0.001]}>
               <mesh geometry={nodes.Plane004_white_0.geometry} material={materials['Material.007']} position={[-15.585, 335.45, -554.261]} rotation={[-Math.PI / 2, 0, 0]} scale={[175.595, 100, 100]} />
               <mesh geometry={nodes.Plane002_red_0.geometry} material={materials.material} position={[5496.594, 613.064, -724.42]} rotation={[-Math.PI / 2, 0, 0]} scale={[175.595, 100, 100]} />
               <mesh geometry={nodes.Plane003_red_0.geometry} material={materials.material} position={[-5540.824, 613.591, -757.926]} rotation={[-Math.PI / 2, 0, 0]} scale={[175.595, 100, 100]} />
@@ -111,19 +116,19 @@ export function Campus(props) {
                   <mesh geometry={nodes.Stadium_Upper_TransparentDisplay_0.geometry} material={materials.TransparentDisplay} />
                 </group>
                 <mesh onPointerEnter={(e) => setText('Chemistry Block')}
-                  onPointerLeave={(e) => clear()} 
+                  onPointerLeave={(e) => clear()}
                   geometry={nodes.Stadium_Body_Placeable_0.geometry} material={materials.Placeable} position={[0, 0, 1]} />
                 <mesh onPointerEnter={(e) => setText('Chemistry Block')}
-                  onPointerLeave={(e) => clear()} 
+                  onPointerLeave={(e) => clear()}
                   geometry={nodes.Stadium_Door_Placeable_0.geometry} material={materials.Placeable} />
                 <mesh onPointerEnter={(e) => setText('Chemistry Block')}
-                  onPointerLeave={(e) => clear()} 
+                  onPointerLeave={(e) => clear()}
                   geometry={nodes.Stadium_Foundation_Placeable_0.geometry} material={materials.Placeable} position={[0, 0, 1]} />
                 <mesh onPointerEnter={(e) => setText('Chemistry Block')}
-                  onPointerLeave={(e) => clear()} 
+                  onPointerLeave={(e) => clear()}
                   geometry={nodes.Stadium_Inside_Placeable_0.geometry} material={materials.Placeable} position={[0, 0, 1]} />
                 <mesh onPointerEnter={(e) => setText('Chemistry Block')}
-                  onPointerLeave={(e) => clear()} 
+                  onPointerLeave={(e) => clear()}
                   geometry={nodes.Stadium_Parts_Placeable_0.geometry} material={materials.Placeable} position={[0, 0, 1]} />
               </group>
             </group>
@@ -165,7 +170,7 @@ export function Campus(props) {
           <mesh geometry={nodes.Gate002.geometry} material={materials['_White.023']} position={[0, 0.667, 0]} scale={1.604} />
           <group position={[0, 0.667, 0]} scale={1.604}>
             <mesh geometry={nodes.Plane_1.geometry} material={materials['_White.023']} />
-            <mesh  sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = '/Digestive'; }} geometry={nodes.Plane_2.geometry} material={materials['_Black.027']} />
+            <mesh sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = '/Digestive'; }} geometry={nodes.Plane_2.geometry} material={materials['_Black.027']} />
           </group>
           <mesh sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = '/Digestive'; }} geometry={nodes.Gate004.geometry} material={materials['_Black.027']} position={[0, 0.667, 0]} scale={1.604} />
           <mesh geometry={nodes.m3d.geometry} material={materials['_White.022']} position={[0, 1.39, 0]} scale={1.604} />
@@ -439,42 +444,42 @@ export function Campus(props) {
           <mesh geometry={nodes.Object_8003.geometry} material={materials['Green_sosna.001']} />
           <mesh geometry={nodes.Object_9002.geometry} material={materials['Green_sosna.001']} />
         </group>
-        <mesh 
-        
-        onPointerEnter={(e) => setText('TelePort')}
-        onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0.geometry} material={materials['build_mat.001']} position={[-6.257, 1.137, 7.444]} rotation={[Math.PI, -0.651, Math.PI]} scale={0.158} />
-        <mesh 
-        onPointerEnter={(e) => setText('TelePort')}
-        onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0001.geometry} material={materials['build_mat.001']} position={[-6.257, 1.137, 7.444]} rotation={[Math.PI, -0.651, Math.PI]} scale={0.158} />
-        <mesh 
-        onPointerEnter={(e) => setText('TelePort')}
-        onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0002.geometry} material={materials['build_mat.001']} position={[-6.257, 1.137, 7.444]} rotation={[Math.PI, -0.651, Math.PI]} scale={0.158} />
+        <mesh
+
+          onPointerEnter={(e) => setText('TelePort')}
+          onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0.geometry} material={materials['build_mat.001']} position={[-6.257, 1.137, 7.444]} rotation={[Math.PI, -0.651, Math.PI]} scale={0.158} />
+        <mesh
+          onPointerEnter={(e) => setText('TelePort')}
+          onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0001.geometry} material={materials['build_mat.001']} position={[-6.257, 1.137, 7.444]} rotation={[Math.PI, -0.651, Math.PI]} scale={0.158} />
+        <mesh
+          onPointerEnter={(e) => setText('TelePort')}
+          onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0002.geometry} material={materials['build_mat.001']} position={[-6.257, 1.137, 7.444]} rotation={[Math.PI, -0.651, Math.PI]} scale={0.158} />
         <mesh geometry={nodes.Object_3.geometry} material={materials.glaze} position={[-72.446, 0.522, 1.102]} rotation={[-1.612, 0, 0]} scale={[0.346, 0.347, 0.56]} />
         <mesh geometry={nodes.Object_28.geometry} material={materials.mullion} position={[-72.446, 0.522, 1.102]} rotation={[-1.612, 0, 0]} scale={[0.346, 0.347, 0.56]} />
         <mesh geometry={nodes.Object_95.geometry} material={materials.mesh_1} position={[-72.446, 0.522, 1.102]} rotation={[-1.612, 0, 0]} scale={[0.346, 0.347, 0.56]} />
         <mesh geometry={nodes.Object_96.geometry} material={materials.mesh_1} position={[-72.446, 0.522, 1.102]} rotation={[-1.612, 0, 0]} scale={[0.346, 0.347, 0.56]} />
         <mesh geometry={nodes.Object_98.geometry} material={materials.mesh_1} position={[-72.446, 0.522, 1.102]} rotation={[-1.612, 0, 0]} scale={[0.346, 0.347, 0.56]} />
         <mesh geometry={nodes.Object_4005.geometry} material={materials['Material.001']} position={[-13.097, 0, -1848.919]} />
-
+        {/* <RigidBody type='mesh'> */}
         <mesh geometry={nodes.Object_10001.geometry} material={materials.Trek_Material_free} position={[-8.449, 0.216, 1.437]} rotation={[-Math.PI, 1.552, -Math.PI]} scale={0.189} />
-        <mesh geometry={nodes.Object_10002.geometry} material={materials.Trek_Material_free} position={[-13.71, 0.204, 1.554]} rotation={[0, 0.035, 0]} scale={0.189} />
-        <mesh geometry={nodes.Object_10003.geometry} material={materials.Trek_Material_free} position={[-13.869, 0.217, -3.39]} rotation={[0, -1.516, 0]} scale={0.189} />
-        <mesh geometry={nodes.Object_10004.geometry} material={materials.Trek_Material_free} position={[-8.57, 0.21, -3.59]} rotation={[Math.PI, -0.033, Math.PI]} scale={0.189} />
-        <mesh geometry={nodes.Object_10005.geometry} material={materials.Trek_Material_free} position={[-11.8, 0.194, -14.736]} rotation={[Math.PI, -0.033, Math.PI]} scale={0.189} />
-        <mesh geometry={nodes.Object_10006.geometry} material={materials.Trek_Material_free} position={[-37.773, 0.181, -14.694]} rotation={[0, -1.564, 0]} scale={0.189} />
-        <mesh geometry={nodes.Object_10007.geometry} material={materials.Trek_Material_free} position={[-37.612, 0.239, 13.503]} rotation={[0, 0.02, 0]} scale={0.189} />
-        <mesh geometry={nodes.Object_14.geometry} material={materials.Trek_Material_free} position={[-8.304, 0.213, -1.081]} rotation={[3.138, -0.013, 3.141]} scale={0.189} />
-        <mesh geometry={nodes.Object_14001.geometry} material={materials.Trek_Material_free} position={[-14.007, 0.22, -1.008]} rotation={[3.138, -0.013, 3.141]} scale={0.189} />
-        <mesh geometry={nodes.Object_14002.geometry} material={materials.Trek_Material_free} position={[-11.546, 0.21, -9.087]} rotation={[3.138, -0.013, 3.141]} scale={[0.189, 0.189, 0.603]} />
-        <mesh geometry={nodes.Object_14003.geometry} material={materials.Trek_Material_free} position={[-37.935, 0.232, -0.585]} rotation={[3.138, -0.004, 3.141]} scale={[0.189, 0.189, 1.721]} />
-        <mesh geometry={nodes.Object_14004.geometry} material={materials.Trek_Material_free} position={[-11.335, 0.197, 7.36]} rotation={[3.138, -0.013, 3.141]} scale={[0.189, 0.189, 0.656]} />
-        <mesh geometry={nodes.Object_16001.geometry} material={materials.Trek_Material_free} position={[-3.85, 0.2, -1.033]} rotation={[-3.14, 1.564, 3.139]} scale={[0.189, 0.189, 0.241]} />
-        <mesh geometry={nodes.Object_16002.geometry} material={materials.Trek_Material_free} position={[-11.094, 0.2, 1.713]} rotation={[-3.14, 1.564, 3.139]} scale={[0.189, 0.189, 0.099]} />
-        <mesh geometry={nodes.Object_16003.geometry} material={materials.Trek_Material_free} position={[-11.173, 0.2, -3.717]} rotation={[-3.141, 1.547, 3.14]} scale={[0.189, 0.189, 0.11]} />
-        <mesh geometry={nodes.Object_16004.geometry} material={materials.Trek_Material_free} position={[-24.743, 0.2, -14.903]} rotation={[-3.13, 1.57, 3.129]} scale={[0.189, 0.189, 0.792]} />
-        <mesh geometry={nodes.Object_16005.geometry} material={materials.Trek_Material_free} position={[-24.624, 0.2, 13.678]} rotation={[-3.13, 1.57, 3.129]} scale={[0.189, 0.189, 0.795]} />
+        <mesh geometry={nodes.Object_10002.geometry} material={materials.Trek_Material_free} position={[-13.71, 0.216, 1.554]} rotation={[0, 0.035, 0]} scale={0.189} />
+        <mesh geometry={nodes.Object_10003.geometry} material={materials.Trek_Material_free} position={[-13.869, 0.216, -3.39]} rotation={[0, -1.516, 0]} scale={0.189} />
+        <mesh geometry={nodes.Object_10004.geometry} material={materials.Trek_Material_free} position={[-8.57, 0.216, -3.59]} rotation={[Math.PI, -0.033, Math.PI]} scale={0.189} />
+        <mesh geometry={nodes.Object_10005.geometry} material={materials.Trek_Material_free} position={[-11.8, 0.216, -14.736]} rotation={[Math.PI, -0.033, Math.PI]} scale={0.189} />
+        <mesh geometry={nodes.Object_10006.geometry} material={materials.Trek_Material_free} position={[-37.773, 0.216, -14.694]} rotation={[0, -1.564, 0]} scale={0.189} />
+        <mesh geometry={nodes.Object_10007.geometry} material={materials.Trek_Material_free} position={[-37.612, 0.216, 13.503]} rotation={[0, 0.02, 0]} scale={0.189} />
+        <mesh geometry={nodes.Object_14.geometry} material={materials.Trek_Material_free} position={[-8.304, 0.216, -1.081]} rotation={[3.138, -0.013, 3.141]} scale={0.189} />
+        <mesh geometry={nodes.Object_14001.geometry} material={materials.Trek_Material_free} position={[-14.007, 0.216, -1.008]} rotation={[3.138, -0.013, 3.141]} scale={0.189} />
+        <mesh geometry={nodes.Object_14002.geometry} material={materials.Trek_Material_free} position={[-11.546, 0.216, -9.087]} rotation={[3.138, -0.013, 3.141]} scale={[0.189, 0.189, 0.603]} />
+        <mesh geometry={nodes.Object_14003.geometry} material={materials.Trek_Material_free} position={[-37.935, 0.216, -0.585]} rotation={[3.138, -0.004, 3.141]} scale={[0.189, 0.189, 1.721]} />
+        <mesh geometry={nodes.Object_14004.geometry} material={materials.Trek_Material_free} position={[-11.335, 0.216, 7.36]} rotation={[3.138, -0.013, 3.141]} scale={[0.189, 0.189, 0.656]} />
+        <mesh geometry={nodes.Object_16001.geometry} material={materials.Trek_Material_free} position={[-3.85, 0.216, -1.033]} rotation={[-3.14, 1.564, 3.139]} scale={[0.189, 0.189, 0.241]} />
+        <mesh geometry={nodes.Object_16002.geometry} material={materials.Trek_Material_free} position={[-11.094, 0.216, 1.713]} rotation={[-3.14, 1.564, 3.139]} scale={[0.189, 0.189, 0.099]} />
+        <mesh geometry={nodes.Object_16003.geometry} material={materials.Trek_Material_free} position={[-11.173, 0.216, -3.717]} rotation={[-3.141, 1.547, 3.14]} scale={[0.189, 0.189, 0.11]} />
+        <mesh geometry={nodes.Object_16004.geometry} material={materials.Trek_Material_free} position={[-24.743, 0.216, -14.903]} rotation={[-3.13, 1.57, 3.129]} scale={[0.189, 0.189, 0.792]} />
+        <mesh geometry={nodes.Object_16005.geometry} material={materials.Trek_Material_free} position={[-24.624, 0.216, 13.678]} rotation={[-3.13, 1.57, 3.129]} scale={[0.189, 0.189, 0.795]} />
 
-
+        {/* </RigidBody> */}
         <mesh geometry={nodes.Cube.geometry} material={materials['Material.002']} position={[-25.077, -0.315, 0.155]} scale={2.637} />
         <mesh geometry={nodes.Text012.geometry} material={nodes.Text012.material} position={[-8.638, 0.994, 17.634]} rotation={[Math.PI / 2, 0, 1.563]} scale={0.125} />
         <mesh geometry={nodes.Text011.geometry} material={nodes.Text011.material} position={[-7.384, 3.751, 15.991]} rotation={[Math.PI / 2, 0, -1.579]} scale={0.192} />
@@ -552,18 +557,18 @@ export function Campus(props) {
         <mesh geometry={nodes.Cube097.geometry} material={nodes.Cube097.material} position={[-7.955, 1.348, 19.532]} rotation={[Math.PI, -0.008, Math.PI]} scale={[0.537, 0.028, 0.725]} />
         <mesh geometry={nodes.Cube096.geometry} material={materials['Material.059']} position={[-5.337, 1.771, 18.694]} rotation={[Math.PI, -0.008, Math.PI]} scale={[-3.121, -1.252, -2.371]} />
         <group position={[-5.855, 3.023, 18.955]} rotation={[Math.PI, -0.008, Math.PI]} scale={[-3.308, -1.252, -2.513]}>
-          <mesh 
-          onPointerEnter={(e) => setText('Canteen')}
-          onPointerLeave={(e) => clear()} geometry={nodes.Cube024.geometry} material={materials['Material.060']} />
+          <mesh
+            onPointerEnter={(e) => setText('Canteen')}
+            onPointerLeave={(e) => clear()} geometry={nodes.Cube024.geometry} material={materials['Material.060']} />
           <mesh geometry={nodes.Cube024_1.geometry} material={nodes.Cube024_1.material} />
         </group>
         <mesh geometry={nodes.Cube094.geometry} material={materials['Material.061']} position={[-5.337, 1.771, 18.694]} rotation={[Math.PI, -0.008, Math.PI]} scale={[-3.121, -1.252, -2.371]} />
         <group position={[-7.072, 2.321, -17.457]} scale={[0.094, 0.062, 0.065]}>
-          <mesh 
-          
-          onPointerEnter={(e) => setText('Contributers Block')}
-          onPointerLeave={(e) => clear()}
-          geometry={nodes.Plane124.geometry} material={materials['super market']} />
+          <mesh
+
+            onPointerEnter={(e) => setText('Contributers Block')}
+            onPointerLeave={(e) => clear()}
+            geometry={nodes.Plane124.geometry} material={materials['super market']} />
           <mesh geometry={nodes.Plane124_1.geometry} material={materials['Material.063']} />
         </group>
         <group position={[-4.007, 2.59, -17.671]} rotation={[Math.PI / 2, Math.PI / 2, 0]} scale={[0.28, 0.256, 0.712]}>
@@ -600,14 +605,14 @@ export function Campus(props) {
         </group>
         <mesh geometry={nodes.Cube008.geometry} material={materials['Material.066']} position={[-7.158, 2.245, -17.016]} scale={[1.393, 0.305, 0.55]} />
         <group position={[-7.147, 0.413, -18.765]} scale={[0.094, 0.062, 0.065]}>
-          <mesh 
-          onPointerEnter={(e) => setText('Contributers Block')}
-          onPointerLeave={(e) => clear()}
-          geometry={nodes.Cube016.geometry} material={materials['super market']} />
-          <mesh 
-          onPointerEnter={(e) => setText('Contributers Block')}
-          onPointerLeave={(e) => clear()}
-          geometry={nodes.Cube016_1.geometry} material={materials['super market border']} />
+          <mesh
+            onPointerEnter={(e) => setText('Contributers Block')}
+            onPointerLeave={(e) => clear()}
+            geometry={nodes.Cube016.geometry} material={materials['super market']} />
+          <mesh
+            onPointerEnter={(e) => setText('Contributers Block')}
+            onPointerLeave={(e) => clear()}
+            geometry={nodes.Cube016_1.geometry} material={materials['super market border']} />
         </group>
         <mesh geometry={nodes.Plane008.geometry} material={nodes.Plane008.material} position={[-30.811, 0.775, 21.942]} rotation={[Math.PI / 2, 0, 3.138]} scale={0.047} />
         <mesh geometry={nodes.Plane007.geometry} material={materials['Material.067']} position={[-24.895, 0.775, 18.877]} rotation={[Math.PI / 2, 0, -1.574]} scale={0.047} />
@@ -729,15 +734,15 @@ export function Campus(props) {
           <mesh geometry={nodes.FootballBall_1.geometry} material={materials.White} />
           <mesh geometry={nodes.FootballBall_2.geometry} material={materials.Black} />
         </group>
-        <mesh 
-        onPointerEnter={(e) => setText('TelePort')}
-        onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0006.geometry} material={materials['build_mat.003']} position={[-43.654, 1.137, -8.149]} rotation={[0, 1.467, 0]} scale={0.158} />
-        <mesh 
-        onPointerEnter={(e) => setText('TelePort')}
-        onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0007.geometry} material={materials['build_mat.003']} position={[-43.654, 1.137, -8.149]} rotation={[0, 1.467, 0]} scale={0.158} />
-        <mesh 
-        onPointerEnter={(e) => setText('TelePort')}
-        onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0008.geometry} material={materials['build_mat.003']} position={[-43.654, 1.137, -8.149]} rotation={[0, 1.467, 0]} scale={0.158} />
+        <mesh
+          onPointerEnter={(e) => setText('TelePort')}
+          onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0006.geometry} material={materials['build_mat.003']} position={[-43.654, 1.137, -8.149]} rotation={[0, 1.467, 0]} scale={0.158} />
+        <mesh
+          onPointerEnter={(e) => setText('TelePort')}
+          onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0007.geometry} material={materials['build_mat.003']} position={[-43.654, 1.137, -8.149]} rotation={[0, 1.467, 0]} scale={0.158} />
+        <mesh
+          onPointerEnter={(e) => setText('TelePort')}
+          onPointerLeave={(e) => clear()} geometry={nodes.Sphere_019_Sphere_002_0008.geometry} material={materials['build_mat.003']} position={[-43.654, 1.137, -8.149]} rotation={[0, 1.467, 0]} scale={0.158} />
         <mesh geometry={nodes.Object_10008.geometry} material={materials['Trek_Material_free.001']} position={[-11.546, 0.194, 13.432]} rotation={[-Math.PI, 1.548, -Math.PI]} scale={0.189} />
         <mesh geometry={nodes.Plane.geometry} material={materials['Material.003']} position={[-22.376, 0.811, 8.504]} rotation={[-Math.PI / 2, 0, -0.463]} scale={[0.431, 0.404, 0.395]} />
         <mesh geometry={nodes.Plane047.geometry} material={materials['Material.003']} position={[-23.265, 0.811, 8.064]} rotation={[-Math.PI / 2, 0, -0.463]} scale={[0.431, 0.404, 0.395]} />
@@ -844,22 +849,25 @@ export function Campus(props) {
 
           <mesh geometry={nodes.Torus002.geometry} material={materials['Material.006']} position={[-42.263, 0.314, -7.224]} scale={0.66} />
 
-          <RigidBody type="fixed" sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = '/signup'; }}>
-          <mesh geometry={nodes.Torus003.geometry} material={materials['Material.006']} position={[1.5, 0.314, 0]} scale={[0.4,4,3]} />
+          <RigidBody type="fixed" sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = 'https://edu-verse-chat.vercel.app/'; }}>
+            <mesh geometry={nodes.Torus003.geometry} material={materials['Material.006']} position={[1.5, 0.314, 0]} scale={[0.4, 4, 3]} />
           </RigidBody>
+
           <RigidBody type="fixed" sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = '/CorridorBiology'; }}>
             <mesh geometry={nodes.Torus005.geometry} material={materials['Material.006']} position={[-13.652, 0.314, 15.75]} scale={0.66} />
           </RigidBody>
 
           <mesh geometry={nodes.Torus006.geometry} material={materials['Material.006']} position={[-7.469, 0.314, 6.358]} scale={0.66} />
 
-          <mesh geometry={nodes.Torus007.geometry} material={materials['Material.006']} position={[-14.907, 0.318, -0.749]} scale={0.452} />
+          <RigidBody type="fixed" sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = 'https://edu-verse-chat.vercel.app/chats'; }}>
+            <mesh geometry={nodes.Torus007.geometry} material={materials['Material.006']} position={[-14.907, 0.318, -0.749]} scale={0.452} />
+          </RigidBody>
 
           <mesh geometry={nodes.Torus008.geometry} material={materials['Material.006']} position={[-6.256, 0.314, 14.896]} scale={0.66} />
 
-          {/* <RigidBody type="fixed" sensor onIntersectionEnter={()=>{console.log("jkn"); window.location.href = '/SolarSystem?gravity=0&flycontrol=true';}}> */}
+          <RigidBody type="fixed" sensor onIntersectionEnter={()=>{console.log("jkn"); window.location.href = 'https://www.google.com/';}}>
           <mesh geometry={nodes.Torus009.geometry} material={materials['Material.006']} position={[-7.076, 0.314, -15.688]} scale={0.66} />
-          {/* </RigidBody> */}
+          </RigidBody>
         </Float>
         <mesh geometry={nodes.Text001.geometry} material={materials['Material.009']} position={[-8.08, 2.155, -16.434]} rotation={[1.558, 0, 0]} scale={0.352} />
         <mesh geometry={nodes.Cube005.geometry} material={nodes.Cube005.material} position={[5.197, 0.037, 0.076]} rotation={[1.568, Math.PI / 2, 0]} scale={[0.07, 12.433, 1.299]} />

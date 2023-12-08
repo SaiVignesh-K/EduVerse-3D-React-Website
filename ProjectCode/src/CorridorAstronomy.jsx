@@ -112,9 +112,9 @@ export function CorridorAstronomy(props) {
           <RigidBody type="fixed" sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = '/SolarSystem?gravity=0&flycontrol=true'; }}>
             <mesh geometry={nodes.Torus006.geometry} material={materials['Material.008']} position={[15.217, 0.104, -1.074]} scale={0.483} />
           </RigidBody>
-          {/* <RigidBody type="fixed" sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = '/SolarSystem?gravity=0&flycontrol=true'; }}> */}
+          <RigidBody type="fixed" sensor onIntersectionEnter={() => { console.log("jkn"); window.location.href = './?x=100&y=0.3&z=-270'; }}>
             <mesh geometry={nodes.Torus001.geometry} material={materials['Material.008']} position={[-5.397, 0.104, 7.621]} scale={0.483} />
-            {/* </RigidBody> */}
+          </RigidBody>
         </Float>
       </group></RigidBody>
   )

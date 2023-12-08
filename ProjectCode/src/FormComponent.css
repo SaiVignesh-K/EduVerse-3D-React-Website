@@ -1,0 +1,304 @@
+
+  
+  
+  .clickStyle h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 50px;
+    /* z-index: 999999999; */
+  }
+  
+  .clickStyle svg {
+    width: 200px;
+    /* z-index: 999999999; */
+  }
+  
+  .chatBox {
+    border-radius: 3px 3px 0px 0px;
+    position: fixed;
+    top: 20%;
+    padding: 5px 10px 5px 10px;
+    right: -36px;
+    width: 111px;
+    height: 40px;
+    background-color: #0D122B;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    z-index: 999999999;
+  }
+  
+  .chatBox:hover {
+    -webkit-box-shadow: 0 0 35px 2px rgba(0, 0, 0, .24);
+    -moz-box-shadow: 0 0 35px 2px rgba(0, 0, 0, .24);
+    box-shadow: 0 0 35px 2px rgba(0, 0, 0, .24);
+  }
+  
+  .chatBox span svg {
+    width: 21px;
+    transform: rotate(90deg);
+  }
+  
+  .chatBox span {
+    display: inline-block;
+    position: relative;
+    top: 4.8px;
+  }
+  
+  .chatBox p {
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    right: -5px;
+    z-index: 999999999;
+  }
+  
+  .MainChatBox {
+    width: 320px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 100px 0 rgba(0, 0, 0, .35) !important;
+    -moz-box-shadow: 0 6px 100px 0 rgba(0, 0, 0, .35) !important;
+    box-shadow: 0 6px 100px 0 rgba(0, 0, 0, .35) !important;
+    position: absolute;
+    right: 3%;
+    top: 15%;
+    border-radius: 3px;
+    z-index: 999999999;
+  }
+  
+  .chatIco {
+    position: relative;
+    padding: 15px 12px;
+  }
+  
+  .closeIcon {
+    background: #202020;
+    padding: 4.3px;
+    height: 27px;
+    width: 27px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+  }
+  
+  .closeIcon svg {
+    width: 13px;
+  }
+  
+  .chatTxt {
+    text-align: center;
+  }
+  
+  .chatTxt p {
+    font-size: 17px;
+    color: #000;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  
+  .IconsChat {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .IconsChat a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 9px;
+    position: relative;
+  }
+  
+  .IconsChat a:hover span {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .IconsChat a span {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: -18px;
+    font-size: 13px;
+    color: gray;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .IconsChat a svg {
+    height: 35px;
+  }
+  
+  .IconsChat a svg path {
+    fill: #FFD902;
+    z-index: 999999999;
+  }
+  
+  .txtAreaBox {
+    position: relative;
+    display: none;
+    z-index: 999999999;
+  }
+  
+  .txtAreaBox textarea {
+    border: 0 !important;
+    background: #eaeaeb !important;
+    color: #454A55 !important;
+    padding: 12px 20px !important;
+    max-width: 320px;
+    min-width: 320px;
+    margin-left: -12px;
+    max-height: 145px;
+    min-height: 145px;
+    font-family: 'Helvetica';
+    position: relative;
+    padding-bottom: 37px !important;
+    resize: none;
+  }
+  
+  .txtAreaBox textarea:focus {
+    outline: none;
+    z-index: 999999999;
+  }
+  
+  .selectIcon {
+    position: absolute;
+    bottom: 52px;
+    left: 10px;
+  }
+  
+  .selectIcon svg {
+    width: 13px;
+    cursor: pointer;
+  }
+  
+  .selectIcon svg path {
+    fill: #454A55;
+  }
+  
+  .sndBtn {
+    text-align: right;
+    margin-top: 10px;
+    z-index: 999999999;
+  }
+  
+  .sndBtn input {
+    text-decoration: none;
+    font-size: 13px;
+    padding: 7px 10px;
+    background: #000;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sndBtn input:disabled {
+    background: #cccccc !important;
+    color: #333333 !important;
+    cursor: not-allowed;
+  }
+  
+  /* .emoji {
+                          opacity: 1;
+                      }
+                      
+                      .emoji:hover {
+                          opacity: 1 !important;
+                      }
+                      
+                      .emoji.active {
+                          opacity: 1 !important;
+                      } */
+  /* .emoji.active svg path {
+                          fill: #e3c209;
+                      } */
+  /* .IconsChat:hover .emoji {
+                          opacity: 0.5;
+                      } */
+  
+  .IconsChat a.active svg path {
+    fill: #FFD902;
+  }
+  
+  .IconsChat a:hover svg path {
+    fill: #FFD902;
+  }
+  
+  .IconsChat a::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #eaeaeb;
+    top: 53px;
+    left: 20px;
+    display: none;
+    transform: rotate(45deg);
+  }
+  
+  .IconsChat a.active::after {
+    display: block;
+    
+  }
+  
+  a.activesibling svg path {
+    fill: #c2c2c2;
+  }
+  
+  @media(max-width: 1024px) {
+    .iconBtn span {
+        display: none !important;
+    }
+  }
+  
+  @media(max-width: 991px) {
+    .iconBtn span {
+        display: none !important;
+    }
+  }
+  
+  @media(max-width: 767px) {
+    .iconBtn span {
+        display: none !important;
+    }
+  }
+  
+  @media(max-width: 320px) {
+    .iconBtn span {
+        display: none !important;
+    }
+  
+    .MainChatBox {
+        width: 100%;
+        right: 0%;
+    }
+  
+    .closeIcon {
+        right: 5px;
+    }
+  }
+  .activeEmojiButton {
+    fill: #FFD902 !important;
+  }
+  .IconsChat a svg path {
+    fill: #c2c2c2; /* Set default grey color for emoji buttons */
+  }
+  
+  .IconsChat a.activeEmojiButton svg path {
+    fill: #FFD902 !important; /* Set yellow color for active emoji button */
+  }

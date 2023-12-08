@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'
 
-import profileImage from './love.jpg';
+import profileImage from './love.png';
 
 const DashBoard = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -24,11 +24,17 @@ const DashBoard = () => {
             >
                 {isDropdownOpen && (
                     <ul className="dropdown-menu dropdown-menu-start show" style={{ position: 'absolute', top: '100%', right: 0, zIndex: 1 }}>
-                        <li><a className="dropdown-item" href="#">DashBoard</a></li>
-                        <li><a className="dropdown-item" href="#">Private Rooms</a></li>
-                        <li><a className="dropdown-item" href="#">Update Details</a></li>
+
+                        {/* <li><a className="dropdown-item" href="#">Teleporter</a></li> */}
+                        {/* <li><a className="dropdown-item" href="https://eduverse-chat-frontend.onrender.com/chats">Chats</a></li> */}
+                        <li><a className="dropdown-item" href="https://github.com/HonestFreak/EduVerse/blob/main/contibutor.md">Contributor</a></li>
+
+                        {/* <li><a className="dropdown-item" href="#">Teleporter</a></li> */}
+                        <li><a className="dropdown-item" href="https://edu-verse-chat.vercel.app/chats">Chats</a></li>
+                        {/* <li><a className="dropdown-item" href="#">Contributor</a></li> */}
+
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Sign Out</a></li>
+                        <li><a className="dropdown-item" href="/">Sign Out</a></li>
                     </ul>
                 )}
                 <img
